@@ -296,16 +296,16 @@ function updateStats(){
   var stats_content_spots = document.getElementsByClassName("stats_content_span");
   for(var i = 0; i<stats_content_spots.length; i++){
     stats_content_spots[i].innerHTML= "You have played " + game_count + " game(s) total! " +
-    "You have lost " + lose_count + " game(s) total! " +
-    "You have won " + win_count + " game(s) total! " +
-    "You have tied " + tie_count + " game(s) total! " +
-    "Win/Loss Ratio: " + win_count + ":" + lose_count + ". " +
-    "You have thrown Rock " + ((player_rock_count/game_count)*100) + "% of the time. " +
-    "You have thrown Paper " + ((player_paper_count/game_count)*100) + "% of the time. " +
-    "You have thrown Scissors " + ((player_scissors_count/game_count)*100) + "% of the time. " +
-    "The Opponent has thrown Rock " + ((opponent_rock_count/game_count)*100) + "% of the time. " +
-    "The Opponent has thrown Paper " + ((opponent_paper_count/game_count)*100) + "% of the time. " +
-    "The Opponent has thrown Scissors " + ((opponent_scissors_count/game_count)*100) + "% of the time. ";
+    "You have lost " + localStorage.getItem("lose_count") + " game(s) total! " +
+    "You have won " + localStorage.getItem("win_count") + " game(s) total! " +
+    "You have tied " + localStorage.getItem("tie_count") + " game(s) total! " +
+    "Win/Loss Ratio: " + localStorage.getItem("win_count") + ":" + localStorage.getItem("lose_count") + ". " +
+    "You have thrown Rock " + ((localStorage.getItem("player_rock_count")/localStorage.getItem("game_count"))*100) + "% of the time. " +
+    "You have thrown Paper " + ((localStorage.getItem("player_paper_count")/localStorage.getItem("game_count"))*100) + "% of the time. " +
+    "You have thrown Scissors " + ((localStorage.getItem("player_scissors_count")/localStorage.getItem("game_count"))*100) + "% of the time. " +
+    "The Opponent has thrown Rock " + ((localStorage.getItem("opponent_rock_count")/localStorage.getItem("game_count"))*100) + "% of the time. " +
+    "The Opponent has thrown Paper " + ((localStorage.getItem("opponent_paper_count")/localStorage.getItem("game_count"))*100) + "% of the time. " +
+    "The Opponent has thrown Scissors " + ((localStorage.getItem("opponent_scissors_count")/localStorage.getItem("game_count"))*100) + "% of the time. ";
   }
 }
 
